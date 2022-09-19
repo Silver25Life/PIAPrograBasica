@@ -1,4 +1,5 @@
 ﻿  Source.cpp
-C:\Users\betom\Downloads\PIAPrograBasica-main\PIA Beto\PIA Beto\Source.cpp(8,41): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
-C:\Users\betom\Downloads\PIAPrograBasica-main\PIA Beto\PIA Beto\Source.cpp(88,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
-  PIA Beto.vcxproj -> C:\Users\betom\Downloads\PIAPrograBasica-main\PIA Beto\x64\Debug\PIA Beto.exe
+C:\Users\Aula 409\Desktop\PIAPrograBasica-main\PIA Beto\PIA Beto\Source.cpp(9,41): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Users\Aula 409\Desktop\PIAPrograBasica-main\PIA Beto\PIA Beto\Source.cpp(31,29): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Aula 409\Desktop\PIAPrograBasica-main\PIA Beto\PIA Beto\Source.cpp(44,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+  PIA Beto.vcxproj -> C:\Users\Aula 409\Desktop\PIAPrograBasica-main\PIA Beto\x64\Debug\PIA Beto.exe

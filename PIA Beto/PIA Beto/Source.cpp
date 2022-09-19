@@ -4,8 +4,9 @@
 #include<string>
 using namespace std;
 string name[4], clasif[4], caract[4], desc[4], gen[4];
-int ID[4], year1, year2, year3, op;
-float price1, price2, price3, tax = 0.16, total1, total2, total3;
+int ID[4], year[4];
+float price[4], tax = 0.16, total[4];
+
 
 void agregar() {
 	for (int i = 1; i < 4; i++) {
@@ -14,17 +15,7 @@ void agregar() {
 		cin.ignore();
 		getline(cin, name[i]);
 		cout << "Escriba el año de salida: ";
-		switch (i) {
-		case 1:
-			cin >> year1;
-			break;
-		case 2:
-			cin >> year2;
-			break;
-		case 3:
-			cin >> year3;
-			break;
-		}
+		cin >> year[i];
 		cin.ignore();
 		cout << "Escriba la clasificación del juego: ";
 		getline(cin, clasif[i]);
@@ -35,53 +26,17 @@ void agregar() {
 		cout << "Escriba el genero del juego: ";
 		getline(cin, gen[i]);
 		cout << "Escriba el precio del juego: ";
-		switch (i) {
-		case 1:
-			cin >> price1;
-			total1 = price1 * tax + price1;
-			cout << "El impuesto es del 16%, entonces el precio total es de: $" << total1 << ", con un impuesto del: $" << total1 - price1 << endl;
-			break;
-		case 2:
-			cin >> price2;
-			total2 = price2 * tax + price2;
-			cout << "El impuesto es del 16%, entonces el precio total es de: $" << total2 << ", con un impuesto del: $" << total2 - price2 << endl;
-			break;
-		case 3:
-			cin >> price3;
-			total3 = price3 * tax + price3;
-			cout << "El impuesto es del 16%, entonces el precio total es de: $" << total3 << ", con un impuesto del: $" << total3 - price3 << endl;
-			break;
-		}
+		cin >> price[i];
+		total[i] = price[i] * tax + price[i];
+		cout << "El impuesto es del 16%, entonces el precio total es de: $" << total1 << ", con un impuesto del: $" << total1 - price1 << endl;
 	}
 }
 
 void lista() {
 	cout << "\t\tNombre\t" << "Año\t" << "Clasificación\t" << "Carácteristicas\t\t\t\t" << "Descripción\t\t\t\t" << "Genero\t" << "Precio\t" << "Impuesto\t" << "Presio total" << endl;
 	for (int i = 1; i < 4; i++) {
-		cout << "\t\t" << name[i] << "\t";
-		switch (i) {
-		case 1:
-			cout << year1 << "\t";
-			break;
-		case 2:
-			cout << year2 << "\t";
-			break;
-		case 3:
-			cout << year3 << "\t";
-			break;
-		}
-		cout << clasif[i] << "\t" << caract[i] << "\t" << desc[i] << "\t" << gen[i] << "\t";
-		switch(i) {
-		case 1:
-			cout << price1 << "\t" << total1 - price1 << "\t" << total1 << endl;
-			break;
-		case 2:
-			cout << price2 << "\t" << total2 - price2 << "\t" << total2 << endl;
-			break;
-		case 3:
-			cout << price3 << "\t" << total3 - price3 << "\t" << total3 << endl;
-			break;
-		}
+		cout << "\t\t" << name[i] << "\t" << year[i] << "\t" << clasif[i] << "\t" << caract[i] << "\t" << desc[i] << "\t" << gen[i] << "\t";
+		cout << price[i] << "\t" << total[i] - price[i] << "\t" << total[i] << endl;
 	}
 }
 
