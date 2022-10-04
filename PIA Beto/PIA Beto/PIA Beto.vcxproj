@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a3c7477b-cb42-4f62-bc30-719031fc2d3d}</ProjectGuid>
+    <ProjectGuid>{ac4babf1-7aaa-404f-8cbb-600e482b4141}</ProjectGuid>
     <RootNamespace>PIABeto</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
