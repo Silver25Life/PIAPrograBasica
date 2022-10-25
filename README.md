@@ -1,2 +1,2 @@
 # PIAPrograBasica
-Usar el de version mas avanzada (en este caso 1.1.1)
+Para el avance 2, ver la v1.1.1
