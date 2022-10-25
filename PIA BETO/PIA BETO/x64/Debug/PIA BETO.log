@@ -1,7 +1,14 @@
 ﻿  Source.cpp
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(61,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(62,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(156,27): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(157,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(261,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(63,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(64,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(169,31): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(170,46): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(198,19): warning C4101: 'h': variable local sin referencia
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(253,10): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 2 tiene el tipo 'std::string'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(253,10): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 4 tiene el tipo 'std::string'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(253,10): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 5 tiene el tipo 'std::string'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(253,10): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 6 tiene el tipo 'std::string'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(253,10): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 7 tiene el tipo 'std::string'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(257,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(267,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   PIA BETO.vcxproj -> C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\x64\Debug\PIA BETO.exe
