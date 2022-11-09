@@ -3,23 +3,57 @@
 #include<locale.h>
 #include<string>
 #include<conio.h>
+#include<fstream>
+
 using namespace std;
 bool val = true;
 char op[1];
 int i, j = 0;
 char a = 0;
 struct videojuego{
-	char yearc[4], pricec[9];
+	char yearc[100], pricec[100];
 	int unsigned ID, year;
 	string name, clasif, caract, desc, gen;
 	float price, total, taxf;
 }juego[100];
+
+void leer() {
+	string linea;
+	fstream archivo;
+	archivo.open("archivo.txt");
+	if (!getline(archivo, linea).eof()) {
+		j = stoi(linea);
+	}
+	while (!getline(archivo, linea).eof()) {
+		juego[i].ID = stoi(linea);
+		getline(archivo, linea);
+		juego[i].year = stoi(linea);
+		getline(archivo, linea);
+		juego[i].name =linea;
+		getline(archivo, linea);
+		juego[i].clasif = linea;
+		getline(archivo, linea);
+		juego[i].caract = linea;
+		getline(archivo, linea);
+		juego[i].desc = linea;
+		getline(archivo, linea);
+		juego[i].gen = linea;
+		getline(archivo, linea);
+		juego[i].price = stof(linea);
+		getline(archivo, linea);
+		juego[i].total = stof(linea);
+		getline(archivo, linea);
+		juego[i].taxf = stof(linea);
+		i++;
+	}
+	archivo.close();
+}
+
 void agregar() {
 	bool votro = true, nuevo = true;
 	while (nuevo && j != 101) {
 		juego[j].ID = j+1;
 		cout << "\n\tEscriba el nombre del juego número " << j+1 << ": ";
-		cin.ignore();
 		getline(cin, juego[j].name);
 		cout << "\tEscriba el año de salida: ";
 		cin >> juego[j].yearc;
@@ -31,7 +65,7 @@ void agregar() {
 				for (int k = 0; k < 9; k++) {
 					juego[j].yearc[k] = 0;
 				}
-				cout << "\n\t Favor de escribir un año valido sin letras ni espacios, el año solo puede ser de 4 digitos: ";
+				cout << "\n\t Favor de escribir un año valido sin letras ni espacios: ";
 				cin >> juego[j].yearc;
 				i = -1;
 			}
@@ -55,7 +89,7 @@ void agregar() {
 				for (int k = 0; k < 9; k++) {
 					juego[j].pricec[k] = 0;
 				}
-				cout << "\n\t Favor de escribir un precio valido sin letras ni espacios, el precio solo puede ser de 8 digitos y un punto: ";
+				cout << "\n\t Favor de escribir un precio valido sin letras ni espacios: ";
 				cin >> juego[j].pricec;
 				i = -1;
 			}
@@ -123,7 +157,7 @@ void modificar() {
 			}
 			switch (op[0]) {
 			case '1':
-				cout << "\tEscriba el nombre del juego número " << ID << ": ";
+				cout << "\n\tEscriba el nombre del juego número " << ID << ": ";
 				cin.ignore();
 				getline(cin, juego[ID - 1].name);
 				cout << "\tEscriba el año de salida: ";
@@ -250,12 +284,12 @@ void eliminar() {
 void lista() {
 	cout << "\n\t\tID\tNombre\tAño\tClasificación\tCarácteristicas\t\t\t\tDescripción\t\t\t\tGenero\tPrecio\tImpuesto\tprecio total" << endl;
 	for (int i = 0; i < j; i++) {
-		cout << "\t\t" << juego[i].ID << "\t\t" << juego[i].name << "\t" << juego[i].year << "\t" << juego[i].clasif << "\t" << juego[i].caract << "\t" << juego[i].desc << "\t" << juego[i].gen << "\t";
+		cout << "\t\t" << juego[i].ID << "\t" << juego[i].name << "\t" << juego[i].year << "\t" << juego[i].clasif << "\t" << juego[i].caract << "\t" << juego[i].desc << "\t" << juego[i].gen << "\t";
 		cout << juego[i].price << "\t" << juego[i].taxf << "\t" << juego[i].total << endl;
 	}
 }
 
-void main() {
+void menu() {
 	setlocale(LC_ALL, "");
 	while (val) {
 		cout << "\n\t========== Menú ==========" << endl;
@@ -299,5 +333,37 @@ void main() {
 		}
 	}
 	system("pause");
+}
 
+void guardar() {
+	ofstream archivo;
+	archivo.open("archivo.txt");
+	archivo << j << endl;
+	for (int i = 0; i < j; i++) {
+		archivo << juego[i].ID << endl;
+		archivo << juego[i].year << endl;
+		archivo << juego[i].name << endl;
+		archivo << juego[i].clasif << endl;
+		archivo << juego[i].caract << endl;
+		archivo << juego[i].desc << endl;
+		archivo << juego[i].gen << endl;
+		archivo << juego[i].price << endl;
+		archivo << juego[i].total << endl;
+		archivo << juego[i].taxf << endl;
+	}
+	archivo.close();
+}
+
+void main() {
+	ifstream archivo;
+	archivo.open("archivo.txt");
+	if (!archivo.is_open()) {
+		archivo.close();
+		ofstream archivo;
+		archivo.open("archivo.txt");
+		archivo.close();
+	}
+	leer();
+	menu();
+	guardar();
 }
