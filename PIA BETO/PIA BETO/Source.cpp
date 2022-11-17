@@ -19,7 +19,7 @@ struct videojuego{
 
 void leer() {
 	string linea;
-	fstream archivo;
+	ifstream archivo;
 	archivo.open("archivo.txt");
 	if (!getline(archivo, linea).eof()) {
 		j = stoi(linea);
@@ -54,12 +54,13 @@ void agregar() {
 	while (nuevo && j != 101) {
 		juego[j].ID = j+1;
 		cout << "\n\tEscriba el nombre del juego número " << j+1 << ": ";
+		cin.ignore();
 		getline(cin, juego[j].name);
 		cout << "\tEscriba el año de salida: ";
 		cin >> juego[j].yearc;
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 100; i++) {
 			if (juego[j].yearc[i] == 0) {
-				i = 4;
+				i = 100;
 			}
 			else if (juego[j].yearc[i] < 48 || juego[j].yearc[i] > 57) {
 				for (int k = 0; k < 9; k++) {
@@ -82,11 +83,11 @@ void agregar() {
 		getline(cin, juego[j].gen);
 		cout << "\tEscriba el precio del juego: ";
 		cin >> juego[j].pricec;
-		for (int i = 0; i < 9; i++) {
+		for (int i = 0; i < 100; i++) {
 			if (juego[j].pricec[i] == 0) {
-				i = 9;
+				i = 100;
 			}else if (juego[j].pricec[i] != 46 &&(juego[j].pricec[i] < 48 || juego[j].pricec[i] > 57)) {
-				for (int k = 0; k < 9; k++) {
+				for (int k = 0; k < 100; k++) {
 					juego[j].pricec[k] = 0;
 				}
 				cout << "\n\t Favor de escribir un precio valido sin letras ni espacios: ";
@@ -162,9 +163,9 @@ void modificar() {
 				getline(cin, juego[ID - 1].name);
 				cout << "\tEscriba el año de salida: ";
 				cin >> juego[ID - 1].yearc;
-				for (int i = 0; i < 4; i++) {
+				for (int i = 0; i < 100; i++) {
 					if (juego[ID - 1].yearc[i] == 0) {
-						i = 4;
+						i = 100;
 					}
 					else if (juego[ID - 1].yearc[i] < 48 || juego[ID - 1].yearc[i] > 57) {
 						for (int k = 0; k < 4; k++) {
@@ -187,12 +188,12 @@ void modificar() {
 				getline(cin, juego[ID - 1].gen);
 				cout << "\tEscriba el precio del juego: ";
 				cin >> juego[ID - 1].pricec;
-				for (int i = 0; i < 9; i++) {
+				for (int i = 0; i < 100; i++) {
 					if (juego[ID - 1].pricec[i] == 0) {
-						i = 9;
+						i = 100;
 					}
 					else if (juego[ID - 1].pricec[i] != 46 && (juego[ID - 1].pricec[i] < 48 || juego[ID - 1].pricec[i] > 57)) {
-						for (int k = 0; k < 9; k++) {
+						for (int k = 0; k < 100; k++) {
 							juego[ID - 1].pricec[k] = 0;
 						}
 						cout << "\n\t Favor de escribir un precio valido sin letras ni espacios, el precio solo puede ser de 8 digitos y un punto: ";
@@ -357,7 +358,7 @@ void guardar() {
 void main() {
 	ifstream archivo;
 	archivo.open("archivo.txt");
-	if (!archivo.is_open()) {
+	if (archivo.fail()) {
 		archivo.close();
 		ofstream archivo;
 		archivo.open("archivo.txt");

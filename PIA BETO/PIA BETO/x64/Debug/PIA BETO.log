@@ -1,8 +1,8 @@
 ﻿  Source.cpp
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(97,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(98,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(203,31): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(204,46): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(232,19): warning C4101: 'h': variable local sin referencia
-C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(357,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(98,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(99,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(204,31): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(205,46): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(233,19): warning C4101: 'h': variable local sin referencia
+C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\PIA BETO\Source.cpp(358,13): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
   PIA BETO.vcxproj -> C:\Users\betom\Desktop\Clases\Progra\PIA\PIA BETO\x64\Debug\PIA BETO.exe
