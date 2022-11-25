@@ -54,7 +54,6 @@ void agregar() {
 	while (nuevo && j != 101) {
 		juego[j].ID = j+1;
 		cout << "\n\tEscriba el nombre del juego número " << j+1 << ": ";
-		cin.ignore();
 		getline(cin, juego[j].name);
 		cout << "\tEscriba el año de salida: ";
 		cin >> juego[j].yearc;
@@ -71,8 +70,8 @@ void agregar() {
 				i = -1;
 			}
 		}
-		juego[j].year = atoi(juego[j].yearc);
 		cin.ignore();
+		juego[j].year = atoi(juego[j].yearc);
 		cout << "\tEscriba la clasificación del juego: ";
 		getline(cin, juego[j].clasif);
 		cout << "\tEscriba las carácteristicas del juego: ";
@@ -119,6 +118,7 @@ void agregar() {
 			}
 		}
 		votro = true;
+		cin.ignore();
 	}
 	if (j>100) {
 		cout << "\n\n\t Ya esta llena la lista de juegos" << endl;
@@ -159,7 +159,6 @@ void modificar() {
 			switch (op[0]) {
 			case '1':
 				cout << "\n\tEscriba el nombre del juego número " << ID << ": ";
-				cin.ignore();
 				getline(cin, juego[ID - 1].name);
 				cout << "\tEscriba el año de salida: ";
 				cin >> juego[ID - 1].yearc;
@@ -176,8 +175,8 @@ void modificar() {
 						i = -1;
 					}
 				}
-				juego[j].year = atoi(juego[ID - 1].yearc);
 				cin.ignore();
+				juego[j].year = atoi(juego[ID - 1].yearc);
 				cout << "\tEscriba la clasificación del juego: ";
 				getline(cin, juego[ID - 1].clasif);
 				cout << "\tEscriba las carácteristicas del juego: ";
@@ -223,6 +222,7 @@ void modificar() {
 			case '2':
 				mod = false;
 				break;
+			cin.ignore();
 			}
 		}
 	}
@@ -275,6 +275,7 @@ void eliminar() {
 				}
 				cout << "\n\t Juego eliminado con exito\n";
 				juego[j - 1].ID = 0;
+				cin.ignore();
 				j--;
 			}
 			del = false;
