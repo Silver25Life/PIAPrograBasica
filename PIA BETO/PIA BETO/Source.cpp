@@ -94,7 +94,7 @@ void agregar() {
 				i = -1;
 			}
 		}
-		juego[j].price= atof(juego[j].pricec);
+		juego[j].price = atof(juego[j].pricec);
 		juego[j].taxf = juego[j].price * 0.16;
 		juego[j].total = juego[j].taxf + juego[j].price;
 		cout << "\tEl impuesto es del 16%, entonces el precio total es de: $" << juego[j].total << ", con un impuesto del: $" << juego[j].taxf << endl;
@@ -149,7 +149,7 @@ void modificar() {
 			while (vmod) {
 				cout << "\n\t¿Este es el juego que quiere modificar?\n\t1.Si\n\t2.No\n\t";
 				op[0] = _getche();
-				if (op[0] < 49 || op[0]>50) {
+				if (op[0] < 49 || op[0] > 50) {
 					cout << "\n\tFavor de elegir una opcion valida";
 				}
 				else {
@@ -252,7 +252,7 @@ void eliminar() {
 			while (vdel) {
 				cout << "\n\t¿Este es el juego que quiere eliminar?\n\t1.Si\n\t2.No\n\t";
 				op[0] = _getche();
-				if (op[0] < 49 || op[0]>50) {
+				if (op[0] < 49 || op[0] > 50) {
 					cout << "\n\tFavor de elegir una opcion valida\n";
 				}
 				else {
@@ -304,7 +304,7 @@ void menu() {
 		cout << "\t= = = Elija una de las opciones anteriores = = =\n\t\t";
 		op[0] = _getche();
 		if (op[0] < 49 || op[0]>54) {
-			cout << "\n\t Favor de elegir una de las anteriores opciones.";
+			cout << "\n\t Favor de elegir una de las anteriores opciones.\n\t";
 			op[0] = 0;
 		}
 		else {
